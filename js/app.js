@@ -85,12 +85,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  let wholeAdd = sum(testArray[0], sum(testArray[1],testArray[2])[0])[0];
+  console.log(wholeAdd);
+  let coolMessage = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${wholeAdd} is their sum.`;
+  console.log(coolMessage);
+  return[wholeAdd, coolMessage];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-
-// testSumArray(testArray);
+sumArray();
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -104,13 +108,17 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
-// Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
+// // Write your code here
+// function multiplyArray(multArr) { //eslint-disable-line
+//   let wholeProduct = multiply(testArray[0], multiply(testArray[1],testArray[2])[0])[0];
+//   console.log(wholeProduct);
+//   let coolerMessage = `The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${wholeProduct}.`;
+//   console.log(coolerMessage);
+//   return[wholeProduct, coolerMessage];
+// }
 
-}
-
-// Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+// // Here is the test for multiplyArray(); uncomment it to run it
+// testMultiplyArray(testArray);//eslint-disable-line
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
